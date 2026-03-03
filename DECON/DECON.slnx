@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Decon.Application/Decon.Application.csproj" />
+  <Project Path="Decon.Domain/Decon.Domain.csproj" />
+  <Project Path="Decon.Infrastructure/Decon.Infrastructure.csproj" />
+  <Project Path="Decon.WebApp/Decon.WebApp.Client/Decon.WebApp.Client.csproj" />
+  <Project Path="Decon.WebApp/Decon.WebApp/Decon.WebApp.csproj" />
+</Solution>
