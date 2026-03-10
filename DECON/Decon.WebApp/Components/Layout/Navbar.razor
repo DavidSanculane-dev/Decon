@@ -1,0 +1,22 @@
+﻿<nav class="h-14 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 flex items-center justify-between px-4">
+    
+    <h1 class="text-xl font-semibold">Dashboard</h1>
+
+    <div class="flex items-center gap-4">
+        <button class="p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700" @onclick="ToggleTheme">
+            🌗
+        </button>
+
+        <div class="w-8 h-8 rounded-full bg-gray-400 dark:bg-gray-600"></div>
+    </div>
+
+</nav>
+
+@code {
+    async Task ToggleTheme()
+    {
+        await JS.InvokeVoidAsync("ToggleDarkMode");
+    }
+
+    [Inject] IJSRuntime JS { get; set; }
+}

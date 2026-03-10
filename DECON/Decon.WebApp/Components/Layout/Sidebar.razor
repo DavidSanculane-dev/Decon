@@ -1,0 +1,32 @@
+﻿@inherits LayoutComponentBase
+
+@code {
+    bool collapsed = false;
+
+    void ToggleSidebar()
+    {
+        collapsed = !collapsed;
+    }
+}
+
+<div class="h-screen bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 transition-all duration-300"
+     style="@((collapsed ? "width: 80px;" : "width: 250px;"))">
+
+    <div class="p-4 flex items-center justify-between">
+        <span class="text-xl font-bold" style="@((collapsed ? "display:none;" : ""))">DECON</span>
+
+        <button class="p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700"
+                @onclick="ToggleSidebar">
+            <span class="text-lg">≡</span>
+        </button>
+    </div>
+
+    <nav class="mt-4 flex flex-col gap-2">
+        <SidebarLink Href="/" Icon="💻" Label="Dashboard" Collapsed="collapsed" />
+        <SidebarLink Href="/pcs" Icon="🖥️" Label="PCs" Collapsed="collapsed" />
+        <SidebarLink Href="/monitors" Icon="🖥️" Label="Monitores" Collapsed="collapsed" />
+        <SidebarLink Href="/printers" Icon="🖨️" Label="Impressoras" Collapsed="collapsed" />
+        <SidebarLink Href="/assignments" Icon="🔗" Label="Atribuições" Collapsed="collapsed" />
+    </nav>
+</div>
+

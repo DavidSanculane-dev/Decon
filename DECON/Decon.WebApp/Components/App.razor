@@ -1,0 +1,12 @@
+﻿@using Decon.WebApp.Components.Layout
+
+<Router AppAssembly="@typeof(App).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+    </Found>
+    <NotFound>
+        <h1>Página não encontrada</h1>
+    </NotFound>
+</Router>
+
+<HeadOutlet />
